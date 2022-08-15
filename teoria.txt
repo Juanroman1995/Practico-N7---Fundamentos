@@ -2,11 +2,53 @@ Con tus palabras explica los siguientes conceptos.
 
 
 - Protoype
+  el prototype es un objeto y este contiene la funcion
+	constructora del objeto del que se esta creando, por
+	ejemplo : se declara una función "x", para esa funcion se
+	crea un prototype predeterminado que contiene al	
+	constructor del mismo.
 
 - Explica con un ejemplo en donde haya un super super type, un super type y un subtype
 
+ejemplo:
+  //funcion constructora de super supertype
+  function supersuperType(saludo){
+	  this.saludo = saludo
+  }
+  //supersuperType prototype
+  supersuperType.prototype.saludo = function(){
+	  return this.saludo;
+  }
+  
+  //funcion prototype de supertype
+  function superType(saludo){
+	  //hereda propiedades de instacia
+	  supersuperType.call(this, saludo);
+  }
+  //hereda metodo y comparte propiedades
+  superType.prototype = new supersuperType();
+  
+  //funcion prototype de subtype
+  function SubType(saludo){
+  //hereda propiedades de instacia
+	superType.call(this, saludo);
+  }
+  //hereda metodo y comparte propiedades
+  SubType.prototype = new superType();
+  
+  //crea objetos de subtype
+  var subTypeObj1 = new SubType("hola");
+  var subTypeObj2 = new SubType("buen dia");
+  
+  console.log(subTypeObj1.saludo);
+  console.log(subTypeObj2.saludo);
+
+
 - Que son los Object
+  los object u objetos son entidades de javascript que contienen un conjunto de propiedades y estas propiedades pueden ser un conjunto de caracteristicas, variables,etc.
+  se puede comparar con un objeto en la vida real, por ejemplo una manzana tiene peso, color, aroma, madurez,etc.
 
 - Explica por lo menos 5 metodos de los Object
+
 
 - Que hace Object.keys?
