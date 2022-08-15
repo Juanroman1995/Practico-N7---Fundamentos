@@ -49,6 +49,13 @@ ejemplo:
   se puede comparar con un objeto en la vida real, por ejemplo una manzana tiene peso, color, aroma, madurez,etc.
 
 - Explica por lo menos 5 metodos de los Object
+	
+	1 Object.create: se usa para poder crear un objeto nuevo con el mismo prototipo de un objeto ya creado
+	2 Object.keys: se usa para obtener las claves o keys de un objeto
+	3 Object.values: se usa para obtener los valores o values de un objeto
+	4 object.entries: se usa para obtener una matriz de pares de valor-clave o values-key.
+	5 object.getPrototypeOf: se usa para asignar un prototype de un objeto ya creado, cumple la misma funcion que __proto__
 
 
 - Que hace Object.keys?
+	como dije en el punto anterior Objects.key se usa para obtener los valores de las claves o keys de un objeto
