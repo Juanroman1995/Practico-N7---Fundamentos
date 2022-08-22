@@ -66,9 +66,14 @@ function changeNombre() {
 
 
 
-function Object() {
+//function Object() {
     // Crea un objeto
     // Luego crea otro objeto en donde el sea su padre y ademas se cree como nuevo objeto
     // Utilizar obligatoriamente el Metodo Object
     // Tu código:
-}
+//}
+const Juan = {nombre: 'Juan', alumno: true}
+var luis = Object.create(Juan)
+luis.nombre = 'Luis'
+luis.alumno = false
+console.log(luis)
