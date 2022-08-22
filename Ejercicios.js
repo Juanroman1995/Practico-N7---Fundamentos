@@ -62,7 +62,27 @@ function changeNombre() {
     // Agregar un changeNombre()
     // Mostrar por consola changeNombre() y getNombre(), con nombre distinto en changeNombre() al del constructor y al del getNombre()
     // Tu código:
+    var objeto1 = {
+        nombre : 'default',
+        apellido:'default',
+        getNombre : function(){
+            return 'este es mi nombre ' + this.nombre + ' y mi apellido es '+ this.apellido;
+        },
+        changeNombre : function(){
+            this.nombre = 'Juan'
+            this.apellido = 'Roman'
+            return 'este es mi nombre' + this.nombre + ' y mi apellido es '+ this.apellido;
+        }
+    }
+    var Luis = {
+        nombre : 'Luis',
+        apellido: 'Roman'
+    }
+    Luis.__proto__ = objeto1;
+    console.log(Luis.getNombre())
+    console.log(Luis.changeNombre())
 }
+console.log(changeNombre())
 
 
 
